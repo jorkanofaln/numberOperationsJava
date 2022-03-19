@@ -27,7 +27,10 @@ public class MainWindow {
             System.exit(0);
         });
         isPrimeBtn.addActionListener(e ->{
-            int primeInt = Integer.parseInt(textFieldPrimeNumber.getText());
+            int primeInt = 0;
+            if(!textFieldPrimeNumber.getText().toString().isEmpty()){
+                primeInt = Integer.parseInt(textFieldPrimeNumber.getText());
+            }
             Prime prime = new Prime(primeInt);
             boolean isPrime = prime.isPrime();
             if(isPrime){
@@ -39,8 +42,14 @@ public class MainWindow {
         });
         btnCalculate.addActionListener(e -> {
             String operation = chooseOperation.getSelectedItem().toString();
-            double firstNumber = Double.parseDouble(firstNumberTextField.getText());
-            double secondNumber = Double.parseDouble(textFieldSecond.getText());
+            double firstNumber = 0;
+            double secondNumber = 0;
+            if(!firstNumberTextField.getText().isEmpty()){
+                firstNumber = Double.parseDouble(firstNumberTextField.getText());
+            }
+            if(!textFieldSecond.getText().isEmpty()){
+                secondNumber = Double.parseDouble(textFieldSecond.getText());
+            }
             double result;
             Calculator calc = new Calculator(firstNumber,secondNumber);
             switch (operation){
@@ -103,7 +112,10 @@ public class MainWindow {
                     "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.");
         });
         isEvenBtn.addActionListener(e ->{
-            int evenInt = Integer.parseInt(textFieldPrimeNumber.getText());
+            int evenInt = 0;
+            if(!textFieldPrimeNumber.getText().isEmpty()){
+                evenInt = Integer.parseInt(textFieldPrimeNumber.getText());
+            }
             Prime prime = new Prime(evenInt);
             boolean isEven = prime.isEven();
             if(isEven){
