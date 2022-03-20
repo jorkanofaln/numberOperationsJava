@@ -81,7 +81,11 @@ public class MainWindow {
             }
         });
         aboutBtn.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null,"BSD 3-Clause License\n" +
+            JOptionPane.showMessageDialog(null,
+                    "description:\n" +
+                            "a calculator app made in Java Swing\n"
+                            + "License info:\n" +
+                            "BSD 3-Clause License" +
                     "\n" +
                     "Copyright (c) 2022, Jorkano Faln\n" +
                     "All rights reserved.\n" +
@@ -109,7 +113,7 @@ public class MainWindow {
                     "SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n" +
                     "CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n" +
                     "OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n" +
-                    "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.");
+                    "OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.", "About this app", JOptionPane.INFORMATION_MESSAGE);
         });
         isEvenBtn.addActionListener(e ->{
             int evenInt = 0;
