@@ -23,6 +23,7 @@ public class MainWindow {
         chooseOperation.addItem("multiply");
         chooseOperation.addItem("divide");
         chooseOperation.addItem("powerOf");
+        chooseOperation.addItem("logOf");
         quitButton.addActionListener(e -> {
             System.exit(0);
         });
@@ -76,6 +77,15 @@ public class MainWindow {
                     }
                     else{
                         JOptionPane.showMessageDialog(null,"Invalid Range","The power of operator doesn't support negative numbers",JOptionPane.ERROR_MESSAGE);
+                    }
+                    break;
+                case "logOf":
+                    result = calc.logOf();
+                    if(result < Double.MAX_VALUE/4){
+                        JOptionPane.showMessageDialog(null,"The result is "+Double.toString(result));
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null,"Invalid Range","The log of operator doesn't support negative numbers",JOptionPane.ERROR_MESSAGE);
                     }
                     break;
             }
