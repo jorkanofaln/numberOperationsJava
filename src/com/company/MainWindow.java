@@ -22,6 +22,7 @@ public class MainWindow {
         chooseOperation.addItem("substract");
         chooseOperation.addItem("multiply");
         chooseOperation.addItem("divide");
+        chooseOperation.addItem("remainder");
         chooseOperation.addItem("powerOf");
         chooseOperation.addItem("logOf");
         quitButton.addActionListener(e -> {
@@ -68,6 +69,10 @@ public class MainWindow {
                     break;
                 case "divide":
                     result = calc.divide();
+                    JOptionPane.showMessageDialog(null,"The result is "+Double.toString(result));
+                    break;
+                case "remainder":
+                    result = calc.remainder();
                     JOptionPane.showMessageDialog(null,"The result is "+Double.toString(result));
                     break;
                 case "powerOf":

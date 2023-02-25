@@ -8,16 +8,23 @@ public class Calculator {
         this.secondNumber = secondNumber;
     }
     public double add(){
+
         return firstNumber + secondNumber;
     }
     public double substract(){
+
         return firstNumber - secondNumber;
     }
     public double multiply(){
+
         return firstNumber * secondNumber;
     }
     public double divide(){
+
         return firstNumber / secondNumber;
+    }
+    public double remainder(){
+        return firstNumber % secondNumber;
     }
     public double powerOf(){
         double result= Double.MAX_VALUE/2;
